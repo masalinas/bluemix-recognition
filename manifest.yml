@@ -1,0 +1,13 @@
+---
+declared-services:
+  simplecrm-sqldb:
+    label: sqldb
+    plan: sqldb_free
+applications:
+- name: vaadin-jpa-app-thingtrack-1638
+  instances: 1
+  memory: 512M
+  path: target/vaadin-jpa-application.war
+  services:
+    - simplecrm-sqldb
+  host: vaadin-jpa-app-thingtrack-1638
